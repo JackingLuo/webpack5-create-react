@@ -10,6 +10,8 @@ const HomePage = () => {
         <div>
             <div onClick={handleClick}>HomePage</div>
             <Link to="/detail/123" >详情</Link>
+            <br />
+            <Link to="/outlet" >outlet</Link>
         </div>
     );
 };
