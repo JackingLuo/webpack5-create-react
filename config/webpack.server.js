@@ -3,7 +3,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
     mode: 'production',
-    devtool: 'source-map',
+    devtool: 'eval',
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css'

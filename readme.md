@@ -45,3 +45,7 @@
 >   9.切换成pnpm，引入compression-webpack-plugin优化打包
 
     pnpm i compression-webpack-plugin -D
+
+>  10.antd按需加载
+
+    pnpm i babel-plugin-import -D

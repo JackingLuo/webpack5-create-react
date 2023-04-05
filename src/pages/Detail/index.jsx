@@ -15,7 +15,7 @@ const Detail = () => {
 
     return (
         <div>
-            <Button onClick={handleClick}>Detail</Button>
+            <Button type="primary" onClick={handleClick}>Detail</Button>
         </div>
     );
 };
