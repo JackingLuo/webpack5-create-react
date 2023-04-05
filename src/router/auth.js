@@ -10,7 +10,7 @@ export default function AuthRoute() {
     const matches = useMatches(); //这个钩子只有 data Router 下能用
     const outlet = useOutlet();
     // const isLogined = useAppSelector((state) => state.auth.isLogined);
-    const isLogined = false;
+    const isLogined = true;
     /**
      * 当前路径是否在白名单？
      * 当前是否已登录？

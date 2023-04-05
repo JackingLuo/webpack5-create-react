@@ -15,6 +15,14 @@ module.exports = {
                 isTSX: true,
                 allowNamespaces: true,
             },
+        ],
+        //antd按需加载
+        [
+            'import', {
+                libraryName: 'antd',
+                libraryDirectory: 'es',
+                style: true
+            }
         ]
     ]
 };
