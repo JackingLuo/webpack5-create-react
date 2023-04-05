@@ -26,14 +26,22 @@
 
 >   6.安装react相关包
 
-    npm i react react-dom -S
+    npm i react react-dom react-router-dom -S
+    //安装loadsh和antd
+    npm i antd loadsh -S
 
 >   7.增加babel编译器的预设和插件编译es5以上代码
 
-    npm i  @babel/core @babel/preset-env @babel/preset-react babel-loader -D
-    npm i  @babel/plugin-proposal-decorators @babel/plugin-proposal-export-namespace-from @babel/plugin-transform-typescript  -D
+    npm i  @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript babel-loader -D
+    npm i  @babel/plugin-proposal-export-namespace-from @babel/plugin-transform-typescript  -D
 
 >   8.安装eslint规范编码
 
-    npm i eslint-webpack-plugin -S
-    npm i eslint eslint-plugin-cypress eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks -D
+    //eslint不建议升级到v8
+    npm i eslint eslint-webpack-plugin @babel/eslint-parser eslint-plugin-react eslint-plugin-react-hooks -D
+    //配置typescript
+    npm i typescript @types/react @typescript-eslint/parser @typescript-eslint/eslint-plugin -D
+
+>   9.切换成pnpm，引入compression-webpack-plugin优化打包
+
+    pnpm i compression-webpack-plugin -D
