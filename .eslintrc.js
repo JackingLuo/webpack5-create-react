@@ -6,9 +6,7 @@ module.exports = {
     ],
     plugins: [
         'react',
-        'react-hooks',
-        // "typescript",
-        // "@typescript-eslint"
+        'react-hooks'
     ],
     parser: '@babel/eslint-parser',
     parserOptions: {
@@ -29,7 +27,6 @@ module.exports = {
         requireConfigFile: false
     },
     env: {
-        es2021: true,
         browser: true,
         node: true
     },
@@ -190,47 +187,46 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'warn',
         'no-prototype-builtins': 0
     },
-    // overrides: [
-    //     {
-    //         files: ['*.ts', '*.tsx'],
-    //         extends: [
-    //             // "plugin:@typescript-eslint/eslint-recommended",
-    //             "plugin:@typescript-eslint/recommended"
-    //         ],
-    //         parser: '@typescript-eslint/parser',
-    //         plugins: ['@typescript-eslint'],
-    //         rules: {
-    //             '@typescript-eslint/no-explicit-any': 0,
-    //             '@typescript-eslint/camelcase': 0,
-    //             '@typescript-eslint/explicit-module-boundary-types': 'off',
-    //             'no-use-before-define': 'off',
-    //             '@typescript-eslint/no-use-before-define': ['error'],
-    //             '@typescript-eslint/ban-types': 0,
-    //             '@typescript-eslint/ban-ts-comment': 0,
-    //             'constructor-super': 'off',
-    //             'getter-return': 'off',
-    //             'no-const-assign': 'error',
-    //             'no-dupe-args': 'error',
-    //             'no-dupe-class-members': 'error',
-    //             'no-dupe-keys': 'error',
-    //             'no-func-assign': 'error',
-    //             'no-import-assign': 'error',
-    //             'no-new-symbol': 'error',
-    //             'no-obj-calls': 'error',
-    //             'no-redeclare': 'off',
-    //             '@typescript-eslint/no-redeclare': ['error'],
-    //             'no-setter-return': 'off',
-    //             'no-this-before-super': 'error',
-    //             // https://github.com/typescript-eslint/typescript-eslint/blob/main/docs/linting/TROUBLESHOOTING.md#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
-    //             'no-undef': 'off',
-    //             'no-unreachable': 'error',
-    //             'no-unsafe-negation': 'error',
-    //             'no-var': 'error',
-    //             'prefer-const': 'error',
-    //             'prefer-rest-params': 'error',
-    //             'prefer-spread': 'error',
-    //             'valid-typeof': 'error',
-    //         },
-    //     }
-    // ]
+    overrides: [
+        {
+            files: ['*.ts', '*.tsx'],
+            extends: [
+                'plugin:@typescript-eslint/recommended'
+            ],
+            parser: '@typescript-eslint/parser',
+            plugins: ['@typescript-eslint'],
+            rules: {
+                '@typescript-eslint/no-explicit-any': 0,
+                '@typescript-eslint/camelcase': 0,
+                '@typescript-eslint/explicit-module-boundary-types': 'off',
+                'no-use-before-define': 'off',
+                '@typescript-eslint/no-use-before-define': ['error'],
+                '@typescript-eslint/ban-types': 0,
+                '@typescript-eslint/ban-ts-comment': 0,
+                'constructor-super': 'off',
+                'getter-return': 'off',
+                'no-const-assign': 'error',
+                'no-dupe-args': 'error',
+                'no-dupe-class-members': 'error',
+                'no-dupe-keys': 'error',
+                'no-func-assign': 'error',
+                'no-import-assign': 'error',
+                'no-new-symbol': 'error',
+                'no-obj-calls': 'error',
+                'no-redeclare': 'off',
+                '@typescript-eslint/no-redeclare': ['error'],
+                'no-setter-return': 'off',
+                'no-this-before-super': 'error',
+                // https://github.com/typescript-eslint/typescript-eslint/blob/main/docs/linting/TROUBLESHOOTING.md#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
+                'no-undef': 'off',
+                'no-unreachable': 'error',
+                'no-unsafe-negation': 'error',
+                'no-var': 'error',
+                'prefer-const': 'error',
+                'prefer-rest-params': 'error',
+                'prefer-spread': 'error',
+                'valid-typeof': 'error',
+            },
+        }
+    ]
 };

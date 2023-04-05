@@ -53,7 +53,7 @@ module.exports = {
             },
             //转换js(x)
             {
-                test: /\.jsx?$/,
+                test: /\.(t|j)sx?$/,
                 exclude: /node_moduels/,
                 use: ['babel-loader']
             },

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
+import { Button } from 'antd';
 
 const Detail = () => {
 
@@ -12,7 +13,7 @@ const Detail = () => {
         navigate('/');
     };
 
-    return <div onClick={handleClick}>Detail</div>;
+    return <Button onClick={handleClick}>Detail</Button>;
 };
 
 export default Detail;

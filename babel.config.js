@@ -1,5 +1,6 @@
 module.exports = {
     presets: [
+        ['@babel/preset-typescript'],
         ['@babel/preset-react'],
         ['@babel/preset-env']
     ],
@@ -14,12 +15,6 @@ module.exports = {
                 isTSX: true,
                 allowNamespaces: true,
             },
-        ],
-        [
-            '@babel/plugin-proposal-decorators',
-            {
-                legacy: true,
-            },
-        ],
+        ]
     ]
 };

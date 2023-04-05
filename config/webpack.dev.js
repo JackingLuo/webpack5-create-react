@@ -26,14 +26,5 @@ module.exports = {
             fix: true, //是否自动修复
             formatter: 'stylish'
         })
-    ],
-    module: {
-        rules: [
-            {
-                test: /\.tsx?$/,
-                use: ['babel-loader', 'ts-loader'],
-                exclude: /node_modules/,
-            },
-        ]
-    }
+    ]
 };
