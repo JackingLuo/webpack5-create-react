@@ -13,7 +13,11 @@ const Detail = () => {
         navigate('/');
     };
 
-    return <Button onClick={handleClick}>Detail</Button>;
+    return (
+        <div>
+            <Button onClick={handleClick}>Detail</Button>
+        </div>
+    );
 };
 
 export default Detail;
