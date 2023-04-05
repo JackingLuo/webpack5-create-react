@@ -29,7 +29,7 @@ module.exports = {
             template: path.resolve(__dirname, '../', 'public/index.html'),
             inject: 'body',
             title: 'webpack5搭建react开发环境',
-            favicon: '../public/favicon.ico'
+            favicon: path.resolve(__dirname, '../', 'public/favicon.ico')
         }),
         new WebpackBar({
             // color: "#85d", // 默认green，进度条颜色支持HEX
