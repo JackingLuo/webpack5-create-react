@@ -55,7 +55,10 @@ module.exports = {
             {
                 test: /\.(t|j)sx?$/,
                 exclude: /node_moduels/,
-                use: ['babel-loader']
+                use: ['thread-loader', 'babel-loader'],
+                include: [
+                    path.resolve(__dirname, '../', 'src'),
+                ],
             },
         ]
     }
