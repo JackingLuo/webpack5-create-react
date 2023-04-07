@@ -15,7 +15,7 @@ module.exports = {
                 warnings: false, //eslint警告不用阻断代码流程
             }
         },
-        historyApiFallback: true,
+        historyApiFallback: true
     },
     plugins: [
         //在webpack中集成eslint

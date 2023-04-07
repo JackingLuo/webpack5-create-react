@@ -4,7 +4,7 @@
   "description": "webpack5构建react",
   "main": "index.js",
   "scripts": {
-    "server": "webpack server --env development --config webpack.config.js",
+    "dev": "webpack server --env development --config webpack.config.js",
     "build": "webpack --env production --config webpack.config.js",
     "lint": "eslint -c ./.eslintrc.js --ext .js,.jsx,.ts,.tsx ./",
     "eslint": "npx eslint .",

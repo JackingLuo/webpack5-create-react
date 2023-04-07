@@ -1,16 +1,22 @@
 import React from 'react';
-import { useParams, useLocation, useNavigate } from 'react-router-dom';
+// import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { Button } from 'antd';
 
 const Detail = () => {
 
-    const params = useParams();
-    const locations = useLocation();
-    const navigate = useNavigate();
+    // const params = useParams();
+    // const locations = useLocation();
+    // const navigate = useNavigate();
 
     const handleClick = () => {
-        console.log('%c [ params, locations]-8', 'font-size:13px; background:pink; color:#bf2c9f;', params, locations);
-        navigate('/');
+        const xhr = new XMLHttpRequest();
+        xhr.open('/success', { params: 111 });
+        xhr.setRequestHeader({ contentType: 'application/json' });
+        xhr.onload = function (data) {
+            // 请求结束后，在此处写处理代码
+
+            console.log('%c [ data ]-18', 'font-size:13px; background:pink; color:#bf2c9f;', data);
+        };
     };
 
     return (
