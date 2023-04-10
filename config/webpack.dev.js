@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+const path = require('path');
 const EslintWebpackPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
@@ -15,6 +17,13 @@ module.exports = {
                 warnings: false, //eslint警告不用阻断代码流程
             }
         },
+        proxy: {
+            '/api': {
+                target: 'http://127.0.0.1:8088',
+                pathRewrite: { '^/api': '' },
+                changeOrigin: true
+            },
+        },
         historyApiFallback: true
     },
     plugins: [
@@ -22,9 +31,14 @@ module.exports = {
         new EslintWebpackPlugin({
             eslintPath: 'eslint',
             extensions: ['js', 'ts', 'jsx', 'tsx'],
-            exclude: ['node_modules'],
+            exclude: ['node_modules', 'dist', 'true'],
             fix: true, //是否自动修复
             formatter: 'stylish'
+        }),
+        new webpack.DllReferencePlugin({
+            context: __dirname,
+            // manifest就是我们第一步中打包出来的json文件
+            manifest: require(path.resolve(__dirname, '../', 'dll/vendor-manifest.json')),
         })
     ]
 };

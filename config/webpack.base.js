@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackBar = require('webpackbar');
 
+
 module.exports = {
     entry: {
         chunk: ['react', 'react-dom/client'],
@@ -55,7 +56,7 @@ module.exports = {
             {
                 test: /\.(t|j)sx?$/,
                 exclude: /node_moduels/,
-                use: ['thread-loader', 'babel-loader'],
+                use: ['thread-loader', 'babel-loader?cacheDirectory=true'],
                 include: [
                     path.resolve(__dirname, '../', 'src'),
                 ],
