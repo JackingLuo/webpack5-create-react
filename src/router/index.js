@@ -18,6 +18,7 @@ const router = createBrowserRouter([{
             handle: { title: '首页' }
         }, {
             path: '/detail/:id',
+            handle: { title: '详情' },
             element: <Detail />,
         }, {
             path: '/outlet',

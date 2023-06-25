@@ -1,5 +1,6 @@
 import React, { useMemo, useEffect } from 'react';
 import { useMatches, useOutlet, Navigate } from 'react-router-dom';
+import { isEmpty } from 'loadsh';
 
 export default function AuthRoute() {
     /**
@@ -18,7 +19,8 @@ export default function AuthRoute() {
      */
     const whiteList = ['/', '/detail', '/outlet'];
     const page = useMemo(() => {
-        const { pathname } = matches[1];
+        if (isEmpty(matches)) { return; }
+        const { pathname } = matches[matches.length - 1];
 
         console.log('%c [ pathname ]-23', 'font-size:13px; background:pink; color:#bf2c9f;', pathname);
         const isInWL = whiteList.includes(pathname);
@@ -29,7 +31,7 @@ export default function AuthRoute() {
      * 模仿 vue-router 后置钩子修改网页标题
      */
     useEffect(() => {
-        const title = matches[1]?.handle?.title;
+        const title = matches[matches.length - 1]?.handle?.title;
         const isHasTitle = typeof title === 'string';
         if (isHasTitle) {
             document.title = title;
