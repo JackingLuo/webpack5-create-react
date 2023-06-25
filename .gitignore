@@ -1,4 +1,4 @@
 /node_modules
 /dist
 /true
-/pnpm-lock
+# /pnpm-lock
