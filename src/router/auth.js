@@ -1,6 +1,6 @@
 import React, { useMemo, useEffect } from 'react';
 import { useMatches, useOutlet, Navigate } from 'react-router-dom';
-import { isEmpty } from 'loadsh';
+import { isEmpty } from 'lodash';
 
 export default function AuthRoute() {
     /**

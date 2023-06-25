@@ -7,7 +7,7 @@ module.exports = {
         // 依赖的库数组
         vendor: [
             'antd',
-            'loadsh',
+            'lodash',
             'react',
             'react-dom',
             'react-router-dom',

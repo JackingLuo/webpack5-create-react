@@ -31,8 +31,8 @@
 >   6.安装react相关包
 
     pnpm add react react-dom react-router-dom -S
-    //安装loadsh和antd
-    pnpm add antd loadsh -S
+    //安装lodash和antd
+    pnpm add antd lodash -S
 
 >   7.增加babel编译器的预设和插件编译es5以上代码
 
